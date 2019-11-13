@@ -10,7 +10,7 @@ $ sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.
 $ sudo nix-channel --update nixos-hardware
 ```
 
-2. Setup `configuration.nix`
+2. Setup `/etc/nixos/configuration.nix`
 ```nix
 {
   imports =

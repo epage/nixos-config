@@ -7,7 +7,7 @@
     package = pkgs.pulseaudioFull;
   };
   # Some programs need this to function properly, like XFCE
-  nixpkgs.config.pulseaudio = true
+  nixpkgs.config.pulseaudio = true;
 
   environment.systemPackages = with pkgs; [
     apulse  # Allows ALSA applications to use pulse

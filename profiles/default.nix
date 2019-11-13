@@ -74,9 +74,6 @@
     };
   };
 
-  # /etc/hosts
-  networking.extraHosts = secrets.extraHosts;
-
   # Google nameservers
   networking.nameservers = [
     "8.8.8.8"

@@ -34,5 +34,5 @@
   boot.kernelParams = [
     # Hardening: disable legacy virtual syscalls
     "vsyscall=none"
-  ]
+  ];
 }

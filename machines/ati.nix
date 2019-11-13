@@ -36,7 +36,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   powerManagement.powertop.enable = true;
-  powerManagement.upower.enable = true;
+  services.upower.enable = true;
   networking.networkmanager.wifi.powersave = true;
 
   boot.kernelParams = [

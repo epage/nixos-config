@@ -116,7 +116,7 @@
 
   programs.less.enable = true;
 
-  programs.screen.screenrc ''
+  programs.screen.screenrc = ''
     autodetach on # Autodetach session on hangup instead of terminating screen completely
 
     # tab-completion flash in heading bar

@@ -45,7 +45,7 @@
 
   hardware.enableAllFirmware = true;
   # Try re-disabling since I'm getting download issues for a file from Apple
-  hardware.hardware.facetimehd.enable = false;
+  hardware.facetimehd.enable = false;
   services.fwupd.enable = true;
 
   documentation.enable = true;

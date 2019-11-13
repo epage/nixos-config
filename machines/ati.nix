@@ -19,6 +19,8 @@
       ../profiles/security.nix
 
       ../profiles/docker.nix
+
+      ../test-hardware-configuration.nix
     ];
 
   networking.hostName = "ati";

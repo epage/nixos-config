@@ -5,31 +5,44 @@
   # List packages installed in system profile. To search by name, run:
   # nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
-    git
-    bash
-    curl
-    htop
-    iftop
-    iotop
+    # Version control / archiving
+    git gitAndTools.hub
+    unzip zip unrar p7zip dtrx
+
+    # Debugging / monitoring / analyzing
+    htop iotop powertop iftop
+    ltrace strace linuxPackages.perf
+    pciutils lshw smartmontools usbutils
+
+    # Linux shell utils
+    pmutils psmisc which file binutils bc utillinuxCurses exfat dosfstools
+    patchutils moreutils
+
+    # Man pages
+    man man-pages posix_man_pages stdman
+
     lsof
     mkpasswd
     nix-prefetch-scripts
     nix-repl
-    pciutils
-    pmutils
-    psmisc
     stdenv
-    strace
     sudo
     sysstat
     tcpdump
-    usbutils
+
+    curl
     wget
-    zip
   ];
 
   # Allow proprietary software (such as the NVIDIA drivers).
   nixpkgs.config.allowUnfree = true;
+  nix = {
+    trustedBinaryCaches = [
+      http://cache.nixos.org
+      http://hydra.nixos.org
+      http://hydra.cryp.to
+    ];
+  }
 
   hardware.enableAllFirmware = true;
   services.fwupd.enable = true;

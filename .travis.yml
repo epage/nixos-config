@@ -1,0 +1,8 @@
+language: nix
+
+env:
+  global:
+    - STATE_VERSION=19.09
+
+script:
+- nix build -f '<nixpkgs/nixos>' system -I nixpkgs=https://nixos.org/channels/nixos-$STATE_VERSION/nixexprs.tar.xz -I nixos-config=$PWD/machines/ati.nix

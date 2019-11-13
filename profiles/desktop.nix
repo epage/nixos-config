@@ -80,9 +80,6 @@
   ];
 
 
-  # Enable corsair keyboard/mouse
-  hardware.ckb.enable = true;
-
   # Enable 3D acceleration for 32bit applications (e.g. wine)
   hardware.opengl.driSupport32Bit = true;
   hardware.opengl.driSupport = true;

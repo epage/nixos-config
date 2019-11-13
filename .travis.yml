@@ -5,4 +5,5 @@ env:
     - STATE_VERSION=19.09
 
 script:
-- nix build -f '<nixpkgs/nixos>' system --show-trace -I nixpkgs=https://nixos.org/channels/nixos-$STATE_VERSION/nixexprs.tar.xz -I nixos-hardware=https://github.com/NixOS/nixos-hardware/archive/master.tar.gz -I nixos-config=$PWD/machines/ati.nix
+- echo "{ imports = [ ./test-hardware-configuration.nix ./machines/ati.nix ]; system.stateVersion = $STATE_VERSION; }" > test-configuration.nix
+- nix build -f '<nixpkgs/nixos>' system --show-trace -I nixpkgs=https://nixos.org/channels/nixos-$STATE_VERSION/nixexprs.tar.xz -I nixos-hardware=https://github.com/NixOS/nixos-hardware/archive/master.tar.gz -I nixos-config=test-configuration.nix

@@ -76,26 +76,7 @@
     xfce.xfce4_power_manager
     xfce.xfce4taskmanager
 
-    imagemagick
-
     xterm
-    alacritty
-    xdg_utils
-
-    gparted
-
-    epdfview
-    chromium
-    firefox
-    xfontsel
-    slack
-    zoom-us
-    vimHugeX
-    libreoffice
-    vlc
-
-    google-play-music-desktop-player
-    messenger-for-desktop
   ];
 
 

@@ -2,36 +2,12 @@
 
 {
 
-  imports = [
-    ../pkgs/bash/config.nix
-    ../pkgs/steam/config.nix
-    ../pkgs/vim/config.nix
-  ];
-
   # List packages installed in system profile. To search by name, run:
   # nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
-    bat  # cat
-    bb  # system monitor
-    fd  # find
-    ripgrep  # grep
-    exa  # ls
-    dust  # du
-
-    skim  # Fuzzy finder
-    hyperfine
     git
-    xsv
-    jq
-    hexyl
-    universal-ctags
-    mdcat
-
     bash
     curl
-    dos2unix
-    file
-    gnumake
     htop
     iftop
     iotop
@@ -39,8 +15,6 @@
     mkpasswd
     nix-prefetch-scripts
     nix-repl
-    nmap
-    p7zip
     pciutils
     pmutils
     psmisc
@@ -49,11 +23,8 @@
     sudo
     sysstat
     tcpdump
-    unzip
     usbutils
-    vim_configurable
     wget
-    youtube-dl
     zip
   ];
 

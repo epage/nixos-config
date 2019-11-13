@@ -17,13 +17,8 @@
       ../profiles/powermanagement.nix
       ../profiles/redshift.nix
       ../profiles/security.nix
-      #../profiles/games.nix
 
-      ../profiles/networking.nix
       ../profiles/docker.nix
-      #../profiles/latex.nix
-      ../profiles/rust.nix
-      ../profiles/python.nix
     ];
 
   networking.hostName = "ati";

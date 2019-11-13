@@ -13,13 +13,14 @@ All you need in `configuration.nix`
 }
 ```
 
+See also [nix-home](https://github.com/epage/nix-home)
+
 # Implementation
 
 - `machines/`: top-level files.
 - `profiles/`: slices of configuration that can be pulled in.
 - `hardware/`: Low-level hardware support (on top of the auto-generated `hardware-configuration. nix`)
 - `users/`: Potential users for the various machines.
-- `pkgs/`: TBD
 
 # Resources
 

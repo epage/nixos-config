@@ -3,7 +3,6 @@
 {
   environment.systemPackages = with pkgs; [
     opensc
-    gpg
   ];
 
   security.apparmor.enable = true;

@@ -10,13 +10,20 @@ $ sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.
 $ sudo nix-channel --update nixos-hardware
 ```
 
-2. Setup `/etc/nixos/configuration.nix`
+2. Clone this repo
+```bash
+nix-env -i git
+cd /etc/nixos
+git clome https://github.com/epage/nixos-config.git
+```
+
+3. Setup `/etc/nixos/configuration.nix`
 ```nix
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      <path>/machines/<machine>.nix
+      ./nixos-config/machines/<machine>.nix
     ];
 
   system.stateVersion = # ...

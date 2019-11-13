@@ -24,7 +24,6 @@
     lsof
     mkpasswd
     nix-prefetch-scripts
-    nix-repl
     stdenv
     sudo
     sysstat

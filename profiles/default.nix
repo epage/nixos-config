@@ -42,7 +42,7 @@
       http://hydra.nixos.org
       http://hydra.cryp.to
     ];
-  }
+  };
 
   hardware.enableAllFirmware = true;
   services.fwupd.enable = true;

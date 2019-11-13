@@ -3,7 +3,7 @@
 {
   imports =
     [
-      ./lenovo-t580
+      ../hardware/lenovo-t580
 
       ../users/epage.nix
 

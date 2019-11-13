@@ -2,7 +2,15 @@
 
 [![Build Status](https://travis-ci.org/epage/nixos-config.svg?branch=master)](https://travis-ci.org/epage/nixos-config)
 
-All you need in `configuration.nix`
+# Using
+
+1. add the channel for [`nixos-hardware`](https://github.com/NixOS/nixos-hardware):
+```bash
+$ sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
+$ sudo nix-channel --update nixos-hardware
+```
+
+2. Setup `configuration.nix`
 ```nix
 {
   imports =

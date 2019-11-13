@@ -24,7 +24,6 @@
   };
 
   programs.ssh.startAgent = true;
-  programs.gnupg.package = gpg;
   programs.gnupg.agent.enable = true;
   services.udev.packages = [ pkgs.libu2f-host pkgs.yubikey-personalization ];
   services.pcscd.enable = true;

@@ -4,6 +4,10 @@
 
 # Using
 
+See also [nix-home](https://github.com/epage/nix-home)
+
+## Installing
+
 1. add the channel for [`nixos-hardware`](https://github.com/NixOS/nixos-hardware):
 ```bash
 $ sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
@@ -30,7 +34,14 @@ git clome https://github.com/epage/nixos-config.git
 }
 ```
 
-See also [nix-home](https://github.com/epage/nix-home)
+## Updating
+
+```bash
+cd /etc/nixos/nixos-config
+git pull
+cd ..
+nixos-rebuild switch
+```
 
 # Implementation
 

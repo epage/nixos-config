@@ -10,15 +10,15 @@ See also [nix-home](https://github.com/epage/nix-home)
 
 1. add the channel for [`nixos-hardware`](https://github.com/NixOS/nixos-hardware):
 ```bash
-$ sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
-$ sudo nix-channel --update nixos-hardware
+sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
+sudo nix-channel --update nixos-hardware
 ```
 
 2. Clone this repo
 ```bash
-nix-env -i git
+sudo nix-env -i git
 cd /mnt/etc/nixos
-git clone https://github.com/epage/nixos-config.git
+sudo git clone https://github.com/epage/nixos-config.git
 ```
 
 3. Setup `/mnt/etc/nixos/configuration.nix`
@@ -34,13 +34,23 @@ git clone https://github.com/epage/nixos-config.git
 }
 ```
 
+4. Post-install
+```bash
+passwd  # Since we are using an initialPassword
+
+sudo nix-channel --update nixos
+
+sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
+sudo nix-channel --update nixos-hardware
+```
+
 ## Updating
 
 ```bash
 cd /etc/nixos/nixos-config
-git pull
+sudo git pull
 cd ..
-nixos-rebuild switch
+sudo nixos-rebuild switch
 ```
 
 # Implementation

@@ -17,11 +17,11 @@ $ sudo nix-channel --update nixos-hardware
 2. Clone this repo
 ```bash
 nix-env -i git
-cd /etc/nixos
-git clome https://github.com/epage/nixos-config.git
+cd /mnt/etc/nixos
+git clone https://github.com/epage/nixos-config.git
 ```
 
-3. Setup `/etc/nixos/configuration.nix`
+3. Setup `/mnt/etc/nixos/configuration.nix`
 ```nix
 {
   imports =

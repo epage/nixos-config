@@ -4,6 +4,10 @@
 {
   environment.systemPackages = with pkgs; [
     opensc
+    yubikey-manager-qt
+    yubikey-personalization
+    yubikey-personalization-gui
+    yubioath-desktop
   ];
 
   security.apparmor.enable = true;

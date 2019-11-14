@@ -43,7 +43,12 @@
     ];
   };
 
-  services.fwupd.enable = true;
+  # automatic gc
+  nix.gc.automatic = true;
+  nix.gc.dates = "weekly";
+  nix.gc.options = "--delete-older-than 30d";
+  # hardlink identical files to save space
+  nix.autoOptimiseStore = true;
 
   documentation.enable = true;
   documentation.dev.enable = true;
@@ -91,15 +96,10 @@
   # automatic updates every day
   system.autoUpgrade.enable = true;
 
-  # automatic gc
-  nix.gc.automatic = true;
-  nix.gc.dates = "weekly";
-  nix.gc.options = "--delete-older-than 30d";
-  # hardlink identical files to save space
-  nix.autoOptimiseStore = true;
-
   # Enable passwd and co.
   users.mutableUsers = true;
+
+  services.fwupd.enable = true;
 
   # Disable displaying the NixOS manual in a virtual console.
   services.nixosManual.showManual = false;

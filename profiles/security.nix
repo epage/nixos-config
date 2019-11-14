@@ -1,5 +1,6 @@
 { config, pkgs, lib, ... }:
 
+# For a more extreme case, see https://github.com/nixos/nixpkgs/tree/master/nixos/modules/profiles/hardened.nix
 {
   environment.systemPackages = with pkgs; [
     opensc

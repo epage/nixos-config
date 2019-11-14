@@ -7,6 +7,7 @@
 
   security.apparmor.enable = true;
   security.protectKernelImage = true;
+  security.hideProcessInformation = true;
 
   # Whitelist opensc's pkcs11 driver path for ssh-agent.
   # (normally all of /lib is allowed, but it isn't installed there)

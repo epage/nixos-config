@@ -79,6 +79,8 @@
     xfce.xfce4taskmanager
 
     xterm
+
+    firefox
   ];
 
 

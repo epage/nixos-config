@@ -7,8 +7,11 @@
     enableCtrlAltBackspace = true;
 
     displayManager.lightdm.enable = true;
-    desktopManager.default = "xfce";
+    desktopManager.default = "plasma5";
+    desktopManager.enlightenment.enable = true;
     desktopManager.xfce.enable = true;
+    desktopManager.lxqt.enable = true;
+    desktopManager.plasma5.enable = true;
     desktopManager.xterm.enable = false;
 
     xautolock.enable = true;

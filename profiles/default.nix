@@ -95,6 +95,8 @@
   nix.gc.automatic = true;
   nix.gc.dates = "weekly";
   nix.gc.options = "--delete-older-than 30d";
+  # hardlink identical files to save space
+  nix.autoOptimiseStore = true;
 
   # Enable passwd and co.
   users.mutableUsers = true;

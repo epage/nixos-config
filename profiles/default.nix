@@ -110,27 +110,7 @@
 
   programs.command-not-found.enable = true;
 
+  programs.bash.enableCompletion = true;
+
   programs.less.enable = true;
-
-  programs.screen.screenrc = ''
-    autodetach on # Autodetach session on hangup instead of terminating screen completely
-
-    # tab-completion flash in heading bar
-    vbell off
-
-    # Make vim behave like in a normal shell
-    altscreen on
-
-    # Turn off the splash screen
-    startup_message off
-
-    # Use a 30000-line scrollback buffer
-    defscrollback 30000
-
-    # Act as if each screen is a fresh login (ie load the right bash files)
-    shell -$SHELL
-
-    hardstatus alwayslastline
-    hardstatus string '%{= kG}[ %{G}%H %{g}][ %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
-  '';
 }

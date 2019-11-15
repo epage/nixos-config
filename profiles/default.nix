@@ -5,6 +5,8 @@
   # List packages installed in system profile. To search by name, run:
   # nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
+    <homemanager/install>
+
     # Version control / archiving
     git gitAndTools.hub
     unzip zip unrar p7zip dtrx

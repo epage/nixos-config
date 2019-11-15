@@ -113,4 +113,6 @@
   programs.bash.enableCompletion = true;
 
   programs.less.enable = true;
+
+  programs.vim.defaultEditor = true;
 }

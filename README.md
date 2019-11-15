@@ -11,7 +11,6 @@ See also [nix-home](https://github.com/epage/nix-home)
 1. Add the channels:
 ```bash
 sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
-sudo nix-channel --update nixos-hardware
 sudo nix-channel --add https://github.com/rycee/home-manager/archive/release-19.09.tar.gz home-manager
 sudo nix-channel --update
 ```

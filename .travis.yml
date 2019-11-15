@@ -7,7 +7,9 @@ env:
 script:
 - echo "{ imports = [ ./test-hardware-configuration.nix ./machines/ati.nix ]; system.stateVersion = \"$STATE_VERSION\"; }" > test-configuration.nix
 - nix-channel --add https://nixos.org/channels/nixos-$STATE_VERSION/nixexprs.tar.xz nixpkgs
-- nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
-- nix-channel --add https://github.com/rycee/home-manager/archive/release-$STATE_VERSION.tar.gz
+- nix-channel --add https://github.com/rycee/home-manager/archive/release-$STATE_VERSION.tar.gz home-manager
 - nix-channel --update
-- nix build -f '<nixpkgs/nixos>' system --show-trace -I nixos-config=test-configuration.nix
+- >
+  nix build -f '<nixpkgs/nixos>' system --show-trace
+  -I nixos-hardware=https://github.com/NixOS/nixos-hardware/archive/master.tar.gz
+  -I nixos-config=test-configuration.nix

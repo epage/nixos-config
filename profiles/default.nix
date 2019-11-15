@@ -8,7 +8,7 @@
     home-manager.install
 
     # Version control / archiving
-    git gitAndTools.hub
+    git
     unzip zip unrar p7zip dtrx
 
     # Debugging / monitoring / analyzing

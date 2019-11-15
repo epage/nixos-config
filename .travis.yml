@@ -6,7 +6,7 @@ env:
 
 script:
 - echo "{ imports = [ ./test-hardware-configuration.nix ./machines/ati.nix ]; system.stateVersion = \"$STATE_VERSION\"; }" > test-configuration.nix
-- |
+- >
   nix build -f '<nixpkgs/nixos>' system --show-trace
   -I nixpkgs=https://nixos.org/channels/nixos-$STATE_VERSION/nixexprs.tar.xz
   -I nixos-hardware=https://github.com/NixOS/nixos-hardware/archive/master.tar.gz

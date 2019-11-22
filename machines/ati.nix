@@ -1,3 +1,16 @@
+# Ati has 477 GiB SSD. The below was 16GB swap setup was to avoid perf warnings about alignment.
+#
+# ```bash
+# parted /dev/nvme0n1 -- mklabel gpt
+# parted -a optimal /dev/nvme0n1 -- mkpart primary 512MiB -3.4%
+# parted -a optimal /dev/nvme0n1 -- mkpart primary linux-swap -3.4% 100%
+# parted /dev/nvme0n1 -- mkpart ESP fat32 1MiB 512MiB
+# parted /dev/nvme0n1 -- set 3 boot on
+# mkfs.ext4 -L nixos /dev/nvme0n1p1
+# mkswap -L swap /dev/nvme0n1p2
+# mkfs.fat -F 32 -n boot /dev/nvme0n1p3
+# ```
+
 { config, pkgs, ... }:
 
 {

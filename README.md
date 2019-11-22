@@ -38,10 +38,8 @@ sudo git clone https://github.com/epage/nixos-config.git
 ```bash
 passwd  # Since we are using an initialPassword
 
-sudo nix-channel --update nixos
-
 sudo nix-channel --add https://github.com/NixOS/nixos-hardware/archive/master.tar.gz nixos-hardware
-sudo nix-channel --update nixos-hardware
+sudo nix-channel --update
 ```
 
 ## Updating

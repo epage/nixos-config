@@ -60,4 +60,5 @@ sudo nixos-rebuild switch
 
 # Resources
 
+- [Configuration options](https://nixos.org/nixos/manual/options.html#opt-boot.loader.systemd-boot.enable)
 - Based on [ghuntley/dotfiles-nixos](https://github.com/ghuntley/dotfiles-nixos)
